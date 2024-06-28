@@ -1,0 +1,27 @@
+.main-login {
+    min-height: 650px;
+    margin-top: 90px;
+    #contact{
+      form{
+        input[type="submit"]{
+          height: 100%;
+          padding: 10px 0px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  .lien-form {
+    color: black;
+    font-weight: 700;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  .Login-error {
+    color: #ff0000;
+  }
+  #log-link {
+    cursor: pointer;
+  }
