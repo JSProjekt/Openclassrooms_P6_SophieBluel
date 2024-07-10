@@ -26,7 +26,8 @@ form.addEventListener("submit", (e) => {
     headers: { "Content-Type": "application/json" },
     body: user,
   })
-    // recovery api
+    /** recovery api **/
+    
     .then((response) => {
       if (!response.ok) {
         email.style.border = "2px solid #FF0000";

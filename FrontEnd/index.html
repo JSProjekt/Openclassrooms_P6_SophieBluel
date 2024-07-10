@@ -13,6 +13,7 @@
 	<script src="https://kit.fontawesome.com/50bd61e104.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./assets/styletest.css">
 	<script src="./js/views/index.js" defer></script>
+	<script src="./js/views/modal.js" defer></script>
 </head>
 
 <body>
@@ -45,6 +46,42 @@
 		</section>
 		<section id="portfolio">
 			<h2>Mes projets</h2>
+			<!-- modal ? -->
+			<div id="modal-section">
+				<section class="modal-portfolio">
+					<span><i class="fa-solid fa-xmark"></i></span>
+					<h3>Galerie Photo</h3>
+					<div class="gallery-button">
+						<div class="modal-gallery">
+						</div>
+						<div class="add-button ">
+							<button class="buttons">Ajouter une photo</button>
+						</div>
+					</div>
+				</section>
+				<section class="modal-add">
+					<span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+					<span class="xmark-fa"><i class="fa-solid fa-xmark"></i></span>
+					<h3>Ajout photo</h3>
+					<form id="form-add">
+						<div class="add-photo">
+							<i class="fa-regular fa-image"></i>
+							<label for="file" class="labelform">+ Ajouter photo</label>
+							<p>jpg,png : 4mo max</p>
+							<input type="file" name="image" id="file" accept="image/jpg, image/png" required>
+							<img id="image-pw" src="#" alt="Aperçu de l'image">
+						</div>
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="title" required>
+						<label for="category-input">Catégorie</label>
+						<select id="category-input" name="category" required>
+						</select>
+						<div class="button-add ">
+							<button type="submit" class="button-add-work">Valider</button>
+						</div>
+					</form>
+				</section>
+			</div>
 			<div class="content-filter">
 				<button class="buttons-filter selected" id="0">Tous</button>
 			</div>
