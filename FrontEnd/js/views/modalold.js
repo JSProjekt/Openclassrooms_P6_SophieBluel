@@ -1,6 +1,7 @@
-import { getWorks, getCategory, } from '../libs/api.js';
-import { user, token } from '../libs/auth.js';
+import { getWorks,getCategory,loginUser } from "./indexold.js";
 
+const user = window.sessionStorage.getItem("userId");
+const token = window.sessionStorage.getItem("token");
 const body = document.querySelector("body");
 /** Variables **/
 
@@ -23,9 +24,9 @@ const categoryInput = document.querySelector("#category-input");
 const fileInput = document.querySelector("#file");
 const imagePw = document.getElementById("image-pw");
 
-export function initModal() {
+function initModal() {
   displayModalCategory();
-  if (user) {
+  if (loginUser(),user) {
     displayModal();
     displayModalWork();
     closeGallery();
@@ -36,6 +37,7 @@ export function initModal() {
     veriFication();
   }
 }
+initModal();
 
 /** Display if connected **/
 

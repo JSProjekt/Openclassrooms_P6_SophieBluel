@@ -3,7 +3,7 @@
 const form = document.querySelector("form");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const loginOut = document.getElementById("log-link");
+
 
 /** recovery psw / userid **/
 
