@@ -20,7 +20,7 @@ export async function main() {
 
 /* Display recup gallery*/
 
-function displayGallery() {
+export function displayGallery() {
     gallery.innerHTML = "";
     getWorks().then((data) => {
       data.forEach((work) => {

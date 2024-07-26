@@ -1,5 +1,6 @@
 import { getWorks, getCategory, } from '../libs/api.js';
 import { user, token } from '../libs/auth.js';
+import { displayGallery } from "../views/index.js";
 
 const body = document.querySelector("body");
 /** Variables **/
@@ -142,7 +143,7 @@ function deleteWork() {
       fetch(`http://localhost:5678/api/works/${workID}`, deleteWorkID).then(
         () => {
           displayModalWork();
-          displayWorksGallery();
+          displayGallery();
         }
       );
     });
@@ -199,7 +200,7 @@ function addWork() {
       .then((data) => {
 
         displayModalWork();
-        displayWorksGallery();
+        displayGallery();
         formAdd.reset();
         modalPortfolio.style.display = "flex";
         modalAdd.style.display = "none";
