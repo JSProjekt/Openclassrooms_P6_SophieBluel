@@ -1,6 +1,5 @@
 // index.js
 import { getWorks, getCategory } from '../libs/api.js';
-import { loginUser,logoutUser} from '../libs/auth.js';
 
 /** Variables **/
 
@@ -13,9 +12,6 @@ export async function main() {
     window.works=await getWorks()
     displayGallery();
     createButtons();
-    loginUser();
-    logoutUser();
-    displayCategory();
   }
 
 /* Display recup gallery*/
@@ -51,6 +47,7 @@ export function displayGallery() {
       data.forEach((category) => {
         createButton(category);
       });
+      selectButton(0);
     });
   }
   
@@ -91,10 +88,4 @@ export function displayGallery() {
     contentFilter.appendChild(btn);
   }
   
-  async function displayCategory() {
-    // const works = await getWorks();
-    const buttons = document.querySelectorAll(".content-filter button");
-    buttons.forEach((button) => {
-      
-    });
-  }
+  

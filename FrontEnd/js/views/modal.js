@@ -17,10 +17,7 @@ const modalAdd = document.querySelector(".modal-add");
 /** Variables for formular **/
 
 const formAdd = document.querySelector("#form-add");
-const labelFrom = document.querySelector("#form-add label")
-const pFrom = document.querySelector("#form-add p")
 const titleInput = document.querySelector("#title");
-const categoryInput = document.querySelector("#category-input");
 const fileInput = document.querySelector("#file");
 const imagePw = document.getElementById("image-pw");
 
@@ -137,11 +134,13 @@ function deleteWork() {
 
   trashs.forEach(trash => {
     trash.addEventListener("click", (e) => {
+      e.preventDefault();
       const workID = trash.id;
 
 
       fetch(`http://localhost:5678/api/works/${workID}`, deleteWorkID).then(
         () => {
+          
           displayModalWork();
           displayGallery();
         }
@@ -181,7 +180,6 @@ function returnPortfolio() {
 function addWork() {
   formAdd.addEventListener("submit", (e) => {
     e.preventDefault();
-
 
     const formData = new FormData(formAdd);
     fetch("http://localhost:5678/api/works", {
