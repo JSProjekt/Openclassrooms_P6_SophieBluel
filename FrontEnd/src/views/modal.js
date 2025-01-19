@@ -1,6 +1,6 @@
-import { getWorks, getCategory, } from '../libs/api.js';
-import { user, token } from '../libs/auth.js';
-import { displayGallery } from "../views/index.js";
+import { getWorks, getCategory, } from '../services/api.js';
+import { user, token } from '../services/auth.js';
+import { displayGallery } from "../index.js";
 
 const body = document.querySelector("body");
 /** Variables **/

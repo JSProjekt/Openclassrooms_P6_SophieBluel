@@ -1,7 +1,7 @@
 export const user = window.sessionStorage.getItem("userId");
 export const token = window.sessionStorage.getItem("token");
 
-import { contentFilter } from "../views/index.js";
+import { contentFilter } from "../index.js";
 
 const loginOut = document.getElementById("log-link");
 const userText = "Mode édition";

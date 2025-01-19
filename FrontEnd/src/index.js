@@ -1,5 +1,5 @@
 // index.js
-import { getWorks, getCategory } from '../libs/api.js';
+import { getWorks, getCategory } from '../src/services/api.js';
 
 /** Variables **/
 
